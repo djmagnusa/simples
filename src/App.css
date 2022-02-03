@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+/* * {
+  font-family: 'Open Sans', sans-serif !important;
+} */
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-size:large;
+  font-weight: 500;
+}
+/* 
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0rem 6rem;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0rem 6rem;
+  margin-bottom: 45px;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left{ 
+  margin-top: 45px;
+  padding-left: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* s{
+  text-decoration: none;
+    position: relative;
+}
+
+s::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: calc( 60% - 1.5px );
+    border-bottom: 3px solid #262626;
+} */
+
+.big-title h1,h3{
+  color: #262626;
+}
+
+.big-title h1{
+  font-weight: 800;
+  font-size: 3.2rem;
+}
+
+.big-title h1,p{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4.5rem;  
+  margin-bottom: 23px;
+  padding-inline-start: 8px
+}
+ul li:before {
+  content: '-';
+  position: absolute;
+  margin-left: -8px;
+}
+
+/* .right img{
+  position: relative;
+  width: 450px;
+  height: 420px;
+  left: 100px;
+  top: 62px;
+} */
+
+/* .right img{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-self: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 450px;
+} */
+
+.right {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.right img {
+  margin-top: 42px;
+  width: 465px;
+  height: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ui.button, .ui.button:hover{
+  background-color: #00A0E3 !important;
+  color:white !important;
 }
+
+
+.ui.button.hero-button {
+  
+  border-radius: 6%; 
+  color: white; 
+  font-size: 0.8;
+  font-weight: 800;
+  line-height: 1;
+  width: 14rem;
+  height: 4rem;
+}
+
+.description-container{
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+
+    overflow: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 48px
+}
+
+.description-container h1{
+  font-weight:800;
+  font-size: 2.7rem;
+}
+
+.description-container p{
+  font-size: 1.5rem;
+}
+
+.card-group{
+  /* display set to flex by default to the Card.Group */
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding: 0 84px;
+  transform: translateY(-55px);
+}
+
+.ui.card>.image, .ui.cards>.card>.image {
+  background: none !important;
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+  width: 90px !important;
+}
+
+div.ui.card.card-item {
+  width: 95%; 
+  margin-right: 20px;
+}
+
+div.description{  /* semantic ui class for card description */
+  font-size: 1.3rem;
+  color: black !important;
+}
+
+.card-button-group{
+  position: relative;
+  
+}
+
+.card-button-group .ui.button:last-child{
+  margin-top: 10px;
+}
+
+.col-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 50px 135px;
+  padding-bottom: 120px;
+
+}
+
+div.col-item p{
+  color: #808080;
+}
+
+@media only screen and (max-width: 1500px) { /*desktop breakpoint*/
+  
+  .container{
+    padding: 0rem 1rem;
+  }
+
+  .big-title h1{
+    font-weight: 800;
+    font-size: 2.6rem;
+  }
+
+  .right img {
+
+    width: 100%;
+    height: 93%;
+  }
+
+  .container{
+    margin-bottom: 25px;
+  }
+
+  .description-container{
+    padding-top: 42px;
+  }
+  .description-container p{
+    font-size: 1.6rem;
+  }
+
+  .left{ 
+    padding-left: 0px;
+    margin-right: 20px;
+  }
+  
+  .col-container{
+    margin: 0px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    word-wrap: break-word;
+  }
+
+  .col-item {
+    margin-right: 10px;
+  }
+
+  div.ui.card.card-item {
+    width: 100%
+  }
+
+
+  div.col-item p{
+    font-size: 17px;
+  }
+
+  .col-item h2{
+    font-size: 20px
+  }
+
+  /* .card-button-group .ui.button{
+    font-size: 20px;
+  } */
+  .card-button-group .ui.button{
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .card-button-group .ui.button:last-child{
+    margin-top: 0px;
+  }  
+}
+
+@media only screen and (max-width: 414px){
+
+}
+
+
+
+
+
+
