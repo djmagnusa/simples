@@ -31,7 +31,7 @@ const Services = () => {
 
   return (
     <React.Fragment>
-    <div className="col-container">
+    <div className="col-container" data-aos="fade-right">
 
         <div className="col-item">
             <Card  
