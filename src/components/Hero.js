@@ -20,8 +20,9 @@ const Hero = () => {
                     <li><p>Free <b className="bold-text">unbiased</b> consultation for as long as you wish</p></li>
                 </ul>
                 
-                
+    
                 <Button className='hero-button'><span className="icon"><i className="fa fa-phone"></i></span>Book a free call</Button>
+    
                 
                 
             </div>

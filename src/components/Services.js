@@ -41,11 +41,13 @@ const Services = () => {
                 description={healthDescription}  
                 extra={buttons}
             />
-
-            <h2>100 clients served</h2>
-            <p>Many have already benefitted from our
-            unbiased advice and unparalleled
-            customer service</p>
+            <div className="services-done">
+                <h2>100 clients served</h2>
+                <p>Many have already benefitted from our
+                unbiased advice and unparalleled
+                customer service</p>
+            </div>
+            
         </div>
         
         <div className="col-item">
@@ -56,10 +58,14 @@ const Services = () => {
                 description={lifeDescription} 
                 extra={buttons} 
             />
-            <h2>30+ insurance companies</h2>
-            <p>We have access to all insurance companies
-            in India. We have the ability to deliver what
-            you need.</p>
+
+            <div className="services-done">
+                <h2>30+ insurance companies</h2>
+                <p>We have access to all insurance companies
+                in India. We have the ability to deliver what
+                you need.</p>
+            </div>
+            
         </div>
 
         <div className="col-item">
@@ -70,9 +76,13 @@ const Services = () => {
                 description={vehicleDescription}
                 extra={buttons}  
             />
-            <h2>We are bringing back the
-            power of buying insurance
-            back to the customer.</h2>
+            
+            <div className="services-done">
+                <h2>We are bringing back the
+                power of buying insurance
+                back to the customer.</h2>
+            </div>
+            
         </div>
        
     </div>
