@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
+import {PopupButton} from 'react-calendly';
 import tower from '../images/tower.png';
 
 const Hero = () => {
@@ -21,8 +22,9 @@ const Hero = () => {
                 </ul>
                 
     
-                <Button className='hero-button'><span className="icon"><i className="fa fa-phone"></i></span>Book a free call</Button>
-    
+                <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button hero-button' text="Book a free call"><span className="icon"><i className="fa fa-phone"></i></span></PopupButton>
+
+
                 
                 
             </div>
@@ -31,6 +33,8 @@ const Hero = () => {
                 <img src={tower} alt="tower" />
             </div>
         </div>
+
+        
   );
 };
 
