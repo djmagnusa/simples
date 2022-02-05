@@ -31,9 +31,9 @@ const Services = () => {
 
   return (
     <React.Fragment>
-    <div className="col-container" data-aos="fade-right">
+    <div className="col-container">
 
-        <div className="col-item">
+        <div className="col-item" data-aos="fade-right">
             <Card  
                 image={health} 
                 className="card-item"
@@ -50,7 +50,7 @@ const Services = () => {
             
         </div>
         
-        <div className="col-item">
+        <div className="col-item" data-aos="fade-right">
             <Card  
                 image={time} 
                 className="card-item"
@@ -68,7 +68,7 @@ const Services = () => {
             
         </div>
 
-        <div className="col-item">
+        <div className="col-item" data-aos="fade-right">
             <Card  
                 image={vehicle} 
                 className="card-item"
