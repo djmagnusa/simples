@@ -4,6 +4,13 @@ import {PopupButton} from 'react-calendly';
 import tower from '../images/tower.png';
 
 const Hero = () => {
+
+  const buttonText = () => {
+        const text="Book a free call"
+        const callButtonText = <React.Fragment><span className="icon"><i className="fa fa-phone"></i></span>{text}</React.Fragment> 
+        return callButtonText
+  }
+  
   return (
         <div className="container">
             <div className="left">
@@ -21,8 +28,8 @@ const Hero = () => {
                     <li><p>Free <b className="bold-text">unbiased</b> consultation for as long as you wish</p></li>
                 </ul>
                 
-    
-                <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button hero-button' text="Book a free call"><span className="icon"><i className="fa fa-phone"></i></span></PopupButton>
+                
+                <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button hero-button' text={buttonText()}><span className="icon"><i className="fa fa-phone"></i></span></PopupButton>
 
 
                 
