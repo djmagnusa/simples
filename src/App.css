@@ -212,7 +212,7 @@ div.description{  /* semantic ui class for card description */
  }
 
  .ui.card>.extra, .ui.cards>.card>.extra{
-   border-top: 0px none !important;
+   border-top: 0 none !important;
  }
 
 
@@ -235,6 +235,72 @@ div.description{  /* semantic ui class for card description */
 
 div.col-item p{
   color: #808080;
+}
+
+
+
+div.ui.card.review-card{
+  border: 0px none !important;
+  box-shadow: none;
+  width: 100vh;
+}
+
+.ui.card.review-card>.content>.description,.ui.cards>.card>.content>.description {
+  color: rgba(25,31,35) !important;
+  line-height: 1.4em;
+}
+
+.ui.card.review-card>.extra.content {
+  color: black !important;
+}
+
+/* div.ui.card.review-card{
+  margin-left: 200px; 
+  background-color: red;
+} */
+
+.review-container>.review-card>.customer-details{
+  display: flex;
+}
+/* .ui.card.review-card>.extra{
+  border-top: 0px none 
+} */
+
+.ui.card img.avatar {
+  width: 3em !important;
+  height: 3em !important;
+}
+
+span.designation {
+  color: #A5AEB4;
+  
+}
+
+.feedback-wrapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0px 135px;
+}
+
+ui.cards  {
+  margin: 0px !important;
+}
+
+.ui.cards.stats-cards>.card>.content>.header:not(.ui){
+  color: #22A2F8;
+  font-size: 2rem;
+  font-weight:600;
+}
+
+.ui.cards.stats-cards>.card>.content>.header+.description{
+  font-size: 1rem;
+}
+
+.ui.cards.stats-cards>.card{
+  margin: 0 auto;
+  border: 0px none !important;
+  box-shadow: none;
+  width: 200px;
 }
 
 @media only screen and (max-width: 1500px) { /*desktop breakpoint*/
@@ -533,11 +599,25 @@ div.col-item p{
     font-size: 2.7rem !important;
   }
 
- 
-
   div.col-item p{
     font-size: 3.3rem;
   }
+
+  .feedback-wrapper>.stats{
+    display: none
+  }
+
+  .feedback-wrapper {
+    margin: 0px;
+    text-align: justify;
+  }
+
+  .ui.card img.avatar{
+    width: 7em !important;
+    height: 7em !important;
+  }
+  
+
 }
 
 

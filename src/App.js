@@ -3,7 +3,8 @@ import "./App.css";
 import Hero from './components/Hero';
 import Description from './components/Description';
 import Services from './components/Services';
-
+import Review from './components/Review';
+import Faq from './components/Faq';
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
         <Hero />
         <Description />
         <Services />
+        <Review />
+        
     </React.Fragment>
   );
 };

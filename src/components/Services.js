@@ -36,7 +36,7 @@ const buttonText = () => {
 
 const buttons = (
     <div className="card-button-group">
-        <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button' text={buttonText()} primary><span className="icon"><i className="fa fa-phone"></i></span>Book a call</PopupButton>
+        <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button primary' text={buttonText()} primary><span className="icon"><i className="fa fa-phone"></i></span>Book a call</PopupButton>
         <Button onClick={onWhatsappClick} primary><span className="icon"><i className="fa fa-whatsapp"></i></span>Whatsapp us</Button><br/>
         <Button primary><span className="icon"><i className="fa fa-wpforms"></i></span>Fill up a 10 sec form</Button>
     </div>
