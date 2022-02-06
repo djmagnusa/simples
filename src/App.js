@@ -13,6 +13,7 @@ const App = () => {
         <Description />
         <Services />
         <Review />
+        <Faq />
         
     </React.Fragment>
   );

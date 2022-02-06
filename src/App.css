@@ -280,6 +280,7 @@ span.designation {
   display: grid;
   grid-template-columns: auto auto;
   margin: 0px 135px;
+  margin-bottom: 70px;
 }
 
 ui.cards  {
@@ -301,6 +302,61 @@ ui.cards  {
   border: 0px none !important;
   box-shadow: none;
   width: 200px;
+}
+
+.faq-section{
+  margin: 0px 135px;
+}
+
+.faq-section h1{
+  padding-left: 13px;
+}
+
+.accordion {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.accordion-item{
+  
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.inner-accordion{
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(151,162,169, 0.4);
+}
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+/* .accordion-title:hover {
+  background-color: #3ab4cc;
+} */
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  color: #808080;
+  font-weight: 400;
+  
+}
+
+.fa-plus-circle, .fa-minus-circle {
+  color: grey;
+
 }
 
 @media only screen and (max-width: 1500px) { /*desktop breakpoint*/
