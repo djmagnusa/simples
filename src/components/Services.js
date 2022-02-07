@@ -3,7 +3,7 @@ import { Card, Button } from 'semantic-ui-react';
 import { PopupButton } from 'react-calendly';
 import health  from '../images/health.png';
 import vehicle from '../images/motor-cycle-insurance.png';
-import time from '../images/time.svg';
+import time from '../images/time.png';
 
 const healthDescription = [
     'Cover your health related expenses by',

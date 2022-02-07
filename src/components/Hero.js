@@ -12,7 +12,7 @@ const Hero = () => {
   }
   
   return (
-        <div className="container">
+        <div className="hero-container">
             <div className="left">
                 
                 <div className="big-title">
