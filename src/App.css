@@ -213,6 +213,7 @@ div.description{  /* semantic ui class for card description */
 
  .ui.card>.extra, .ui.cards>.card>.extra{
    border-top: 0 none !important;
+
  }
 
 
@@ -246,7 +247,7 @@ div.ui.card.review-card{
 }
 
 .ui.card.review-card>.content>.description,.ui.cards>.card>.content>.description {
-  color: rgba(25,31,35) !important;
+  color: rgba(25,31,35,1) !important;
   line-height: 1.4em;
 }
 
@@ -285,6 +286,7 @@ span.designation {
 
 ui.cards  {
   margin: 0px !important;
+  
 }
 
 .ui.cards.stats-cards>.card>.content>.header:not(.ui){
@@ -359,7 +361,11 @@ ui.cards  {
 
 }
 
+.partners-table{
+  background-color: #f7f9ff;
+}
 .partners-container{
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -372,6 +378,11 @@ ui.cards  {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom:70px;
+}
+
+.partners-header p{
+  color: rgba(0,0,0,.36);
 }
 
 .partners-title{
@@ -384,7 +395,28 @@ ui.cards  {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
 }
+.partnerLogo .logo-icon:before {
+  content: '';
+  min-width: 130px;
+  height: 68px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 10px 1%;
+  border: solid .6px #dedfdf;
+  background-color: #fff;
+  width: 11.5%;
+  transition: all .1s;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  background-size: 1115px 932px;
+  position: relative;
+  overflow: hidden;
+  border: 0
+}
+
 
 .partnerLogo .logo-icon:before {
   content: "";
@@ -423,7 +455,24 @@ ui.cards  {
   opacity: 1;
 }
 
-
+.partnerLogo a {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 15%;
+    flex: 1 0 15%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 130px;
+    margin-top: 20px;
+    margin-right: 35px;
+    background: #fff;
+    color: #000;
+    display: block;
+    position: relative;
+}
 
 
 .logo-icon:before{
@@ -436,6 +485,156 @@ ui.cards  {
 
 .partnerLogo .logo-icon.agon:before {
   background-position: -7px 5px;
+}
+
+.partnerLogo .logo-icon.icicilombard:before {
+  background-position: -26px -848px;
+}
+
+.partnerLogo .logo-icon.maxlife:before {
+  background-position: -296px 7px;
+}
+
+.partnerLogo .logo-icon.cigna:before {
+  background-position: -426px 6px;
+}
+
+.partnerLogo .logo-icon.hdfclife:before {
+  background-position: -571px 7px;
+}
+
+.partnerLogo .logo-icon.tataaig:before {
+  background-position: -850px 5px;
+}
+
+.partnerLogo .logo-icon.kotak:before {
+  background-position: -989px 5px;
+}
+
+.partnerLogo .logo-icon.bajajlife:before {
+  background-position: -16px -79px
+}
+.partnerLogo .logo-icon.bajajgen:before {
+  background-position: -146px -80px
+}
+.partnerLogo .logo-icon.maxhealth:before {
+  background-position: -286px -80px
+}
+.partnerLogo .logo-icon.sbilife:before {
+  background-position: -430px -80px
+}
+.partnerLogo .logo-icon.reliancegen:before {
+  background-position: -709px -80px
+}
+.partnerLogo .logo-icon.reliancelife:before {
+  background-position: -567px -80px
+}
+.partnerLogo .logo-icon.tataaia:before {
+  background-position: -851px -80px
+}
+.partnerLogo .logo-icon.pnbmetlife:before {
+  background-position: -994px -80px
+}
+.partnerLogo .logo-icon.birlasunlife:before {
+  background-position: -5px -170px
+}
+.partnerLogo .logo-icon.canerahsbc:before {
+  background-position: -144px -170px
+}
+.partnerLogo .logo-icon.apollo:before {
+  background-position: -288px -170px
+}
+.partnerLogo .logo-icon.aviva:before {
+  background-position: -427px -170px
+}
+.partnerLogo .logo-icon.digit:before {
+  background-position: -570px -163px
+}
+.partnerLogo .logo-icon.religare:before {
+  background-position: -700px -171px
+}
+.partnerLogo .logo-icon.star:before {
+  background-position: -847px -170px
+}
+.partnerLogo .logo-icon.idbifedrel:before {
+  background-position: -992px -170px
+}
+.partnerLogo .logo-icon.exidelife:before {
+  background-position: -8px -259px
+}
+.partnerLogo .logo-icon.dhfl:before {
+  background-position: -145px -257px
+}
+.partnerLogo .logo-icon.dhflgen:before {
+  background-position: -161px -848px
+}
+.partnerLogo .logo-icon.magmahdi:before {
+  background-position: -294px -846px
+}
+.partnerLogo .logo-icon.rahejaqbe:before {
+  background-position: -570px -846px
+}
+.partnerLogo .logo-icon.edelwisegen:before {
+  background-position: -695px -846px
+}
+.partnerLogo .logo-icon.sbigen:before {
+  background-position: -431px -848px
+}
+.partnerLogo .logo-icon.liberty:before {
+  background-position: -285px -257px
+}
+.partnerLogo .logo-icon.iffcotokio:before {
+  background-position: -426px -255px
+}
+.partnerLogo .logo-icon.bhartiaxa:before {
+  background-position: -569px -255px
+}
+.partnerLogo .logo-icon.bhartiaxaredifining:before {
+  background-position: -688px -255px
+}
+.partnerLogo .logo-icon.futuregenerali:before {
+  background-position: -850px -255px
+}
+.partnerLogo .logo-icon.royalsundaram:before {
+  background-position: -993px -255px
+}
+.partnerLogo .logo-icon.orientalinsurance:before {
+  background-position: -5px -345px
+}
+.partnerLogo .logo-icon.unitedindiainsurance:before {
+  background-position: -142px -345px
+}
+.partnerLogo .logo-icon.newindiainsurance:before {
+  background-position: -284px -345px
+}
+.partnerLogo .logo-icon.shriram:before {
+  background-position: -426px -345px
+}
+.partnerLogo .logo-icon.shriramlifeinsurance:before {
+  background-position: -564px -345px
+}
+.partnerLogo .logo-icon.edelwise:before {
+  background-position: -707px -343px
+}
+.partnerLogo .logo-icon.national:before {
+  background-position: -849px -343px
+}
+.partnerLogo .logo-icon.universalsomplo:before {
+  background-position: -990px -343px
+}
+.partnerLogo .logo-icon.indiafirst:before {
+  background-position: -838px -846px
+}
+.partnerLogo .logo-icon.kotakgeneral:before {
+  background-position: -21px -834px;
+  background-size: 945px 935px
+}
+.partnerLogo .logo-icon.adityabirla:before {
+  background-position: -268px -913px
+}
+.partnerLogo .logo-icon.cholams:before {
+  background-position: -298px -613px;
+  background-size: 700px 700px
 }
 
 
@@ -747,15 +946,122 @@ ui.cards  {
 
   .feedback-wrapper {
     margin: 0px;
+    min-width: 100vh;
     text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 70px;
   }
 
   .ui.card img.avatar{
     width: 7em !important;
     height: 7em !important;
   }
+
+  .customer-details{
+    padding: 13px 20px;
+  }
+
+  span.designation{
+    font-size: 2.2rem;
+    font-weight:lighter;
+    line-height: 2.7rem;
+  }
+  
+  .customer-details b{
+    font-size: 2.6rem;
+    font-weight: 700;
+  }
+
+  .faq-section {
+    margin: 0px;
+    min-width: 100vh; 
+  }
+
+  .faq-section h1{
+    font-size: 4rem;  
+  }
+
+  .accordion{
+    margin: 6rem auto;
+  }
+  
+  .accordion-item{
+    font-size: 1.5rem;
+  }
+
+  .accordion-title{
+    font-size: 2.35rem;
+  }
+
+  .accordion-content{
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  /* .fa-plus-circle, .fa-minus-circle {
+    font-size: 4rem;
+  } */
+  
+  
+  .partners-table{
+    padding-top: 90px;
+    min-width: 100vh;
+  }
+
+  .partners-grid {
+    margin: 0px 50px;
+  }
+
+  .partners-title{
+    margin-bottom: 10px;
+  }
+
+  .partners-title h2{
+    font-size: 2.5rem;
+  }
+
+  .partners-header p{
+    font-size: 2.5rem;
+  }
+
+  .partners-container{
+    margin: 0px;
+  }
+
+  .partners-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+    gap: 30px 80px;
+    padding: 0px 20px;
+  }
+
+
+  .partnerLogo{
+    margin: 0 -5px -20px 0;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+
+
+
   
 
+  
+
+
+  
+  
+
+/* 
+  .accordion-item-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
 }
 
 

@@ -35,7 +35,7 @@ const Review = () => {
                                 <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
                             </div>
 
-                            <div>
+                            <div className="customer-details">
                                 <b>Avni Jha</b><br/><span className="designation">Associate Consultant</span>
                             </div>
                             
