@@ -85,7 +85,8 @@ ul {
   margin-bottom: 23px;
   padding-inline-start: 8px
 }
-ul li:before {
+
+ul.hero-ul li:before {
   content: '-';
   position: absolute;
   margin-left: -8px;
@@ -797,6 +798,62 @@ ui.cards  {
   top: 9px
 }
 
+.slick-dots{
+  bottom: 0px !important;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 0;
+    padding: 0;
+    cursor: pointer
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: 0;
+  background: 0 0;
+}
+
+	
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+    outline: 0;
+}
+
+.slick-dots li button:before {
+  font-family: slick;
+  font-size: 30px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75 ;
+  color: #2f4efb !important;
+  font-size: 8px !important;
+}
 
 
 

@@ -22,7 +22,7 @@ const Hero = () => {
                     <p>as it should be</p>
                 </div>
                 
-                <ul>
+                <ul className="hero-ul">
                     <li><p>Beginning with <b className="bold-text">your requirements</b> rather than a product</p></li>
                     <li><p>No sales calls, no spam, <b className="bold-text">no pestering,</b> ever.</p></li>
                     <li><p>Free <b className="bold-text">unbiased</b> consultation for as long as you wish</p></li>
