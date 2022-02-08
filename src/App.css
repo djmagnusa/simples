@@ -1027,6 +1027,32 @@ ui.cards  {
   color: #FFC400
 }
 
+/* Bottom Slider */
+
+
+.home-banner {
+  width: 100%;
+  background: #F2F7FF;
+  padding: 34px 185px 0;
+}
+.home-banner .container {
+  padding-bottom: 34px
+}
+.home-banner .slick-slide {
+  height: auto
+}
+.home-banner .slick-slide:last-child() {
+  margin-right: 0
+}
+.home-banner .slick-slide img {
+  width: calc(100% - 10px)
+}
+
+
+.home-banner .slick-dots {
+  bottom: -20px
+}
+
 
 
 
@@ -1034,7 +1060,7 @@ ui.cards  {
 
 
 .faq-section{
-  margin: 0px 135px;
+  margin: 40px 135px;
 }
 
 .faq-section h1{
@@ -1043,7 +1069,7 @@ ui.cards  {
 
 .accordion {
   max-width: 100%;
-  margin: 2rem auto;
+  margin: 4rem auto;
 }
 
 .accordion-item{
@@ -1106,6 +1132,7 @@ ui.cards  {
   justify-content: center;
   width: 100%;
   margin-bottom:70px;
+  margin-top: 35px;
 }
 
 .partners-header p{

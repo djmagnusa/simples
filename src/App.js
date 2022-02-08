@@ -10,6 +10,7 @@ import BestPlace from './components/BestPlace';
 import Faq from './components/Faq';
 import Partners from './components/Partners';
 import TopSlider from './components/TopSlider';
+import BottomSlider from './components/BottomSlider';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Review />
         <TopSlider />
         <BestPlace />
+        <BottomSlider />
         <Faq />
         <Partners />
         
