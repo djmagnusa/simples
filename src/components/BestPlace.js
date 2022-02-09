@@ -3,7 +3,7 @@ import blank from '../images/blank.gif';
 
 const BestPlace = () => {
   return (
-    <div className="best-place">
+    <div className="best-place" data-aos="zoom-in">
         <div className="container">
             <div className="left-block">
                 <div className="txt-block opacity-1">What makes<br/> <span>Simples</span> the<br/> <span>best place</span> to buy<br/> <span>insurance</span> in<br className="hide-big"/> India?</div>

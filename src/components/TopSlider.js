@@ -25,14 +25,17 @@ export default class TopSlider extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            initialSlide: 2
+            initialSlide: 2,
+            variableWidth: true,
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerPadding: '10px',
+            variableWidth: true
           }
         }
       ]
@@ -41,7 +44,7 @@ export default class TopSlider extends Component {
       <div className="blk-prd featurebox">
         <Slider className="container featurebanner" {...settings}>
          
-            <div>
+            <div style={{ width: 353}}>
                 <a onclick="javascript:GA360EventPage('carousel-featurebanner','Save tax','');" href="https://investmentlife.policybazaar.com/savetax?utm_content=home_v10" target="_blank">
                     <article class="investment-plans prd-bg">
                         <div class="block-data">
@@ -61,7 +64,7 @@ export default class TopSlider extends Component {
                 </a>
             </div>
 
-            <div>
+            <div style={{ width: 353}}>
                 <a onclick="javascript:GA360EventPage('carousel-featurebanner','Health Insurance','');" href="https://health.policybazaar.com/?offerid=37&utm_content=v10" target="_blank">
                     <article class="health-insurance prd-bg">
                             <div class="block-data">
@@ -79,7 +82,7 @@ export default class TopSlider extends Component {
                 </a>
             </div>
 
-            <div>
+            <div style={{ width: 353}}>
                 <a onclick="javascript:GA360EventPage('carousel-featurebanner','Home Insurance','');" href="https://www.policybazaar.com/home-insurance/" target="_blank">
                     <article class="home-insurance prd-bg">
                         <div class="block-data">
@@ -98,7 +101,7 @@ export default class TopSlider extends Component {
             </div>
 
 
-            <div>
+            <div style={{ width: 353}}>
                 <a onclick="javascript:GA360EventPage('carousel-featurebanner','askpb','');" href="https://www.policybazaar.com/askpb/" target="_blank">
                     <article class="pbaskci prd-bg">
                         <div class="block-data">

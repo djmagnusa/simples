@@ -21,7 +21,6 @@ const App = () => {
         <Review />
         <TopSlider />
         <BestPlace />
-        <BottomSlider />
         <Faq />
         <Partners />
         
