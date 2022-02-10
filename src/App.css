@@ -817,6 +817,10 @@ ui.cards  {
   .blk-prd a:first-child {
       margin: 0 10px
   }
+
+  .blk-prd .container .prd-bg .block-data .left-container p.head{
+    font-size: 23px;
+  }
 }
 @media (max-width:320px) {
   .blk-prd a {
@@ -881,6 +885,35 @@ ui.cards  {
   .blk-prd .container.featurebanner{
       width: 82vh;
   }
+
+  .blk-prd .container .prd-bg .block-data .copy{
+    font-size: 23px;
+  }
+
+  .blk-prd .container .prd-bg .block-data .left-container{
+    margin: -13px 0 0 16px;
+    position: relative;
+  }
+
+  .blk-prd .container .prd-bg .block-data .left-container span.float-icon.investment-plan{
+    background-position: 0 -58px;
+  }
+
+  .blk-prd .container .prd-bg .block-data .left-container span.float-icon.health-insurance{
+    background-position: 0 -348px;
+  }
+
+  .blk-prd .container .prd-bg .block-data .left-container span.float-icon.home-insurance{
+    background-position: 0 -144px;
+  }
+
+  .blk-prd .container .prd-bg .block-data .left-container span.float-icon.askpb-insurance{
+    background-position: 0 -217px;
+  }
+
+  
+
+
 }
 
 	
@@ -1404,11 +1437,38 @@ ui.cards  {
   bottom: -20px
 }
 
+@media only screen and (max-width:640px) {
+  
+  .home-banner{
+      width: 100vh;
+  }
+
+  .home-banner .slick-slide img {
+      width: 100%;
+      margin-right: 0
+  }
+}
+
+@media (max-width:1023px) {
+  .home-banner {
+      background: #fff;
+      padding: 16px 0 24px
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .home-banner {
+      background: #fff;
+      padding: 16px 0 24px
+  }
+}
 
 
 
 
 
+
+/*FAQ */
 
 .faq-section{
   margin: 40px 135px;
@@ -2085,8 +2145,8 @@ ui.cards  {
   }
 
   .ui.card img.avatar{
-    width: 7em !important;
-    height: 7em !important;
+    width: 6.5em !important;
+    height: 6.5em !important;
   }
 
   .customer-details{
@@ -2097,10 +2157,11 @@ ui.cards  {
     font-size: 2.2rem;
     font-weight:lighter;
     line-height: 2.7rem;
+    text-align: left;
   }
   
   .customer-details b{
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     font-weight: 700;
   }
 
@@ -2189,17 +2250,6 @@ ui.cards  {
         -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
-
-
-
-  
-
-  
-
-
-  
-  
-
 /* 
   .accordion-item-heading {
     display: flex;
