@@ -31,9 +31,6 @@ const Hero = () => {
                 
                 <PopupButton url="https://calendly.com/pratush-bh/insurance?month=2022-02" className='ui button hero-button' text={buttonText()}><span className="icon"><i className="fa fa-phone"></i></span></PopupButton>
 
-
-                
-                
             </div>
             
             <div className="right">

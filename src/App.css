@@ -18,6 +18,12 @@ h1,h2,h3,h4,h5 {
 
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+     margin: 0; 
+}
+
 .ui.button{
   font-family: 'Open Sans', sans-serif !important;
 }
@@ -307,6 +313,39 @@ ui.cards  {
   border: 0px none !important;
   box-shadow: none;
   width: 200px;
+}
+
+/*10 sec form */
+
+.thanks-message{
+  margin-top: 20px;
+}
+
+.thanks-message p:last-child{
+  font-weight: 700px;
+  color: red;
+}
+
+.emphasize-text{
+  font-weight: 900;
+}
+
+.family-dob ul{
+  margin-top: 0;
+}
+
+.ui.form label{
+  display: block;
+  margin: 0 0 0.28571429rem 0;
+  color: rgba(0,0,0,.87);
+  font-size: .92857143em;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.dob-item{
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 /*Top Slider */
@@ -2256,6 +2295,7 @@ ui.cards  {
     justify-content: center;
     align-items: center;
   } */
+  
   
 }
 

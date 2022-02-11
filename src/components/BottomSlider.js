@@ -55,7 +55,7 @@ export default class BottomSlider extends Component {
             </div>
 
             <div>
-                 <img src="https://static.pbcdn.in/cdn/images/home-v1/made-in-india-banner.png" loading="lazy" />
+                 <img src={madeInIndia} loading="lazy" />
             </div>
 
             <div>
