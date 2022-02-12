@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker'
-import { Form, Input,Header, Select, Dropdown, Button, Icon, Modal } from 'semantic-ui-react';
+import { Form, Input,Header, Select, Dropdown, Button, Label, Icon, Modal } from 'semantic-ui-react';
 import { PopupButton } from 'react-calendly';
 import { Checkmark } from 'react-checkmark'
 import 'react-datepicker/dist/react-datepicker.css';
@@ -43,6 +43,9 @@ const diseaseOptions = [
 //     );
 // }
 
+var sixDigitOTP = '';
+
+
 
 const HealthButtons = () => {
 
@@ -50,16 +53,20 @@ const HealthButtons = () => {
     const [secondOpen, setSecondOpen] = React.useState(false)
     
     //const [items, setItem] = useState([])
-
+    //const [formDisabled, setFormDisabled] = (false)
     const [selectedDate, setSelectedDate] = useState(null)
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(false)
     const [disabled, setDisabled] = useState(true)
+    const [disabledForm, setDisabledForm] = useState(true)
+    const [familyCount, setFamilyCount] = useState(0)
 
     const [user, setUser] = useState({
         mobileNo: "",
         otp: ""
     })
+
+    
     
    /// const items = [<DatePicker />, <DatePicker />,<DatePicker />, <DatePicker />, <DatePicker /> ]
     const onWhatsappClick= (e) => {
@@ -88,7 +95,7 @@ const HealthButtons = () => {
            // console.log(user.mobileNo)
           setLoading(true);
           var digits = '0123456789';
-          let sixDigitOTP = '';
+          
           for (let i = 0; i < 6; i++ ) {
                sixDigitOTP += digits[Math.floor(Math.random() * 10)];
           }
@@ -121,15 +128,29 @@ const HealthButtons = () => {
             console.log(err)
         }
         setLoading(false)  
-    }
 
+        console.log(sixDigitOTP)
+
+        
+    }
+    console.log(sixDigitOTP)
+
+
+
+    var dobFields = [];
     const handleDropDownSelect = (event, data) => {
         //console.log(data.value)
-       // setItems([]);
-        var numberOfFamilyMembers = data.value
-        // Here set items array empty
+        dobFields = []
         
-        for(let i=0;i<numberOfFamilyMembers;i++){
+        
+        setFamilyCount(data.value)
+        
+
+        console.log(dobFields);
+       
+    }
+
+    for(let i=0;i<familyCount;i++){
         // {
         //     // var node = document.querySelector(".family-members")
         //     // var ele = document.createElement("input");
@@ -139,16 +160,19 @@ const HealthButtons = () => {
         //     // setUsers(...users, <User />)
         //     // items.push(<User id={i} />)      
             
-            items.push(<DatePicker key={i} selected={selectedDate} onChange={date => setSelectedDate(date)} />)        
-         }
+            dobFields.push(<DatePicker key={i} selected={selectedDate} onChange={date => setSelectedDate(date)} />)        
+            
+        }
 
-        //setItems(item => [...item])
-        setItems([...items])
-        //setItems((prevState) => ({ ...prevState, items}))
-        //console.log(items)
-        console.log(items);
-        // setItems([]);
-        // console.log(items);
+    const confirmOTP = (event, data) => {
+        console.log(sixDigitOTP)
+        console.log(user.otp)
+        if( sixDigitOTP === user.otp)
+        {
+            setDisabledForm(false)
+        } else{
+
+        }
     }
 
     // for (let i = 0; i < numberOfFamilyMembers; ++i) {
@@ -189,9 +213,17 @@ const HealthButtons = () => {
                             control={Input}
                             label='OTP'
                             placeholder='Enter OTP'
+                            name="otp"
+                            value={user.otp}
+                            onChange={handleInputs}
                             disabled={disabled}
+                            type='number'
                             required
                         />
+
+                        <Form.Field className="button-formfield">
+                            <Button onClick={confirmOTP} disabled={disabled}>Confirm</Button>
+                        </Form.Field>
 
                         
                         </Form.Group>
@@ -213,32 +245,38 @@ const HealthButtons = () => {
                             searchInput={{ id: 'form-select-family-mmembers' }}
                             className="family-members"
                             onChange={handleDropDownSelect}
+                            value={familyCount}
+                            disabled={disabledForm}
 
                             required
                          />
 
                         <div className="family-dob">
-                            {console.log(items)}
+                            
+                            {console.log({dobFields})}
                             <ul>
 
-                                {items.map((item, index) => (
-                                    <li className="dob-item" key={index}><label className="disease-label">Family member {index+1}:</label> {item}</li>
-                                ))}
+                               {dobFields.map((item, index) => (
+                                   <li className="dob-item" key={index}><label className="disease-label">DOB of family member {index+1} : </label>{item}</li>
+                               ))}
                             </ul>
                         </div>        
 
                       
+                        <Form.Field>
+                            {disabledForm === false &&  <label>Pre-exesting health issues</label>}
+                            <Dropdown
+                                placeholder='Pre-exesting health issues'
+                                fluid
+                                multiple
+                                search
+                                selection
+                                options={diseaseOptions}
+                                disabled={disabledForm}
+                            />
 
-                        <label>Pre-exesting health issues</label>
-                        <Dropdown
-                            placeholder='Disease'
-                            fluid
-                            multiple
-                            search
-                            selection
-                            options={diseaseOptions}
-                        />
-
+                        </Form.Field>
+                        
                          
                 </Form>
             </Modal.Content>
