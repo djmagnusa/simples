@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DatePicker from 'react-datepicker'
-import { Form, Input,Header, Select, Dropdown, Button, Label, Icon, Modal } from 'semantic-ui-react';
+import { Form, Input,Header, Select, Dropdown, Button, Icon, Modal } from 'semantic-ui-react';
 import { PopupButton } from 'react-calendly';
 import { Checkmark } from 'react-checkmark'
 import 'react-datepicker/dist/react-datepicker.css';
@@ -54,8 +54,19 @@ const HealthButtons = () => {
     
     //const [items, setItem] = useState([])
     //const [formDisabled, setFormDisabled] = (false)
-    const [selectedDate, setSelectedDate] = useState(null)
-    const [items, setItems] = useState([])
+    const [selectedDate0, setSelectedDate0] = useState(null)
+    const [selectedDate1, setSelectedDate1] = useState(null)
+    const [selectedDate2, setSelectedDate2] = useState(null)
+    const [selectedDate3, setSelectedDate3] = useState(null)
+    const [selectedDate4, setSelectedDate4] = useState(null)
+    const [selectedDate5, setSelectedDate5] = useState(null)
+    const [selectedDate6, setSelectedDate6] = useState(null)
+    const [selectedDate7, setSelectedDate7] = useState(null)
+    const [selectedDate8, setSelectedDate8] = useState(null)
+    const [selectedDate9, setSelectedDate9] = useState(null)
+
+    
+    // const [items, setItems] = useState([])
     const [loading, setLoading] = useState(false)
     const [disabled, setDisabled] = useState(true)
     const [disabledForm, setDisabledForm] = useState(true)
@@ -150,6 +161,19 @@ const HealthButtons = () => {
        
     }
 
+    const componentsArray = [
+        <DatePicker selected={selectedDate0} onChange={date => setSelectedDate0(date) } />,
+        <DatePicker selected={selectedDate1} onChange={date => setSelectedDate1(date) } />,
+        <DatePicker selected={selectedDate2} onChange={date => setSelectedDate2(date) } />,
+        <DatePicker selected={selectedDate3} onChange={date => setSelectedDate3(date) } />,
+        <DatePicker selected={selectedDate4} onChange={date => setSelectedDate4(date) } />,
+        <DatePicker selected={selectedDate5} onChange={date => setSelectedDate5(date) } />,
+        <DatePicker selected={selectedDate6} onChange={date => setSelectedDate6(date) } />,
+        <DatePicker selected={selectedDate7} onChange={date => setSelectedDate7(date) } />,
+        <DatePicker selected={selectedDate8} onChange={date => setSelectedDate8(date) } />,
+        <DatePicker selected={selectedDate9} onChange={date => setSelectedDate9(date) } />,
+    ]
+    
     for(let i=0;i<familyCount;i++){
         // {
         //     // var node = document.querySelector(".family-members")
@@ -160,7 +184,9 @@ const HealthButtons = () => {
         //     // setUsers(...users, <User />)
         //     // items.push(<User id={i} />)      
             
-            dobFields.push(<DatePicker key={i} selected={selectedDate} onChange={date => setSelectedDate(date)} />)        
+            //dobFields.push(<DatePicker key={i} selected={selectedDate0} onChange={date => setSelectedDate0(date)} />)
+            //dobFields.push(<DatePicker key={i} selected={selectedDate} onChange={date => setSelectedDate(date) } />)
+            dobFields.push(componentsArray[i])        
             
         }
 
@@ -261,7 +287,6 @@ const HealthButtons = () => {
                                ))}
                             </ul>
                         </div>        
-
                       
                         <Form.Field>
                             {disabledForm === false &&  <label>Pre-exesting health issues</label>}
