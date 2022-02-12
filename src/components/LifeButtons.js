@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import DatePicker from 'react-datepicker'
-import { Form, Input,Header, Select, Dropdown, Button, Label, Icon, Modal } from 'semantic-ui-react';
+import { Form, Input,Header, Dropdown, Button, Icon, Modal, Message } from 'semantic-ui-react';
 import { PopupButton } from 'react-calendly';
 import { Checkmark } from 'react-checkmark'
 import 'react-datepicker/dist/react-datepicker.css';
@@ -28,10 +28,12 @@ const LifeButtons = () => {
     const [secondOpen, setSecondOpen] = React.useState(false)
     
     const [selectedDate, setSelectedDate] = useState(null)
-    const [items, setItems] = useState([])
     const [loading, setLoading] = useState(false)
     const [disabled, setDisabled] = useState(true)
     const [disabledForm, setDisabledForm] = useState(true)
+    const [approveSubmit, setApproveSubmit] = useState(true)
+    const [otpError, setOtpError] = useState(false)
+
 
     const [user, setUser] = useState({
         mobileNo: "",
@@ -44,6 +46,7 @@ const LifeButtons = () => {
         value = e.target.value;
 
         setUser({...user, [name]: value})
+       
     }
 
 
@@ -95,6 +98,8 @@ const LifeButtons = () => {
          100
          );
          setDisabled(false)
+         setApproveSubmit(false)
+         
      } catch(err) {
          console.log(err)
      }
@@ -111,10 +116,13 @@ const LifeButtons = () => {
         if( sixDigitOTP === user.otp)
         {
             setDisabledForm(false)
+            setOtpError(false)
         } else{
-    
+            setOtpError(true)
         }
     }
+
+
     
     
     return (
@@ -133,6 +141,14 @@ const LifeButtons = () => {
             <Header content='Term Life Insurance' />
             <Modal.Content>
                     <Form>
+                        {user.mobileNo.length > 10 ? <Message negative>
+                            <Message.Header>Please enter a valid mobile number</Message.Header>
+                        </Message> : <p></p>
+                        }
+
+                        {otpError ?  <Message negative>
+                            <Message.Header>Authentication failed. Please retry</Message.Header>
+                        </Message> : <p></p>}
                         <Form.Group widths='1'>
                             <Form.Field
                                 id='form-input-control-first-name'
@@ -200,6 +216,7 @@ const LifeButtons = () => {
             id='form-button-control-public'
             control={Button}
             content='Submit'
+            disabled={approveSubmit}
             onClick={() => setSecondOpen(true)}
         />
     </Modal.Actions>
